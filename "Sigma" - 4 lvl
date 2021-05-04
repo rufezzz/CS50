@@ -1,0 +1,34 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int sigma(int);
+
+int main(void)
+{
+    printf("Сумму до какого числа необходимо подсчитать?\n");
+    int a = get_int("");
+
+    if (a < 0)
+    {
+        printf("Ошибка!Необходимо положительное число\n");
+        return 1;
+    }
+    else
+    {
+        printf("Сумма всех натуральных чисел: %i\n", sigma(a));
+    }
+}
+int sigma(int n)
+{
+    if (n == 0)
+    {
+    return 0;
+    }
+    else
+    {
+    return n+sigma(n-1);
+    }
+
+return 0;
+
+}
